@@ -1,6 +1,10 @@
 #toDoList{
-border-radius: 1px;
+border-radius: 100px;
 }
 #mainWindow{
 color:saddlebrown;
+}
+button{
+    cursor: pointer;
+    color:aqua;
 }

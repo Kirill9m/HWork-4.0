@@ -6,21 +6,20 @@
     <title></title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <!-- <script src='main.js'></script> -->
 </head>
 <body>
     <h1>ToDoList</h1>
     <div id="toDoList">
+        <label for="taskWindow"></label>
+        <input type="text" id="taskWindow" name="taskWindow">
         <div id="mainWindow">
-            <form>
-                <label for="task"></label><br>
-                <input type="text" id="taskWindow" name="task"><br>
-                <button id="addTask" class="btnAction">Add element</button>
-            </form>
-            <div id="text">
-                Here comes some function!
-            </div>
+            <button id="addBtn">Add element</button>
+            <ul id="list">
+                <!-- <li></li> -->
+            </ul>
         </div>
     </div>
+    <script src='main.js'></script>
 </body>
 </html>
