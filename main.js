@@ -1,8 +1,11 @@
 //Adding elements
 const button = document.querySelector('#addBtn');
+const deleteButton = document.querySelector('#deleteBtn');
 const listText = document.querySelector("#list");
 const taskWindow = document.querySelector("#taskWindow");
 const myList = [];
+
+
 
 //Add Function
 function updateMyList(){
@@ -13,20 +16,19 @@ function updateMyList(){
 }
 
 function removeElement(){
-    
+    myList.pop();
+    listText.removeChild(listText.childNodes[myList.length])
 }
 
 function addToList(){
-    myList.push("\n<li>" + taskWindow.value + "</li>");
+    if(taskWindow.value !== ""){
+    myList.push("<li>" + taskWindow.value + "</li>");
     updateMyList();
-    // for(let i = 0; i < 10; i++){
-    //     listText.innerHTML = "\n<li>" + taskWindow.value + "</li>";
-    // }
+    }else{
+        alert("You have to write something!");
+    }
 }
 
 //Initializing button
 button.addEventListener("click", addToList, true);
-
-// if(myList[0] === undefined){
-//     // listText.innerHTML = "\n<li>Coffee</li>\n<li>Tea</li>\n<li>Milk</li>\n";
-// }
+deleteButton.addEventListener("click", removeElement, true);
