@@ -30,7 +30,8 @@ function addToList(){
         itemLabel.addEventListener("click",
             function(){
                 item.appendChild(itemLabel).classList.toggle("completed");
-                countTask.innerText = document.querySelectorAll(".completed").length 
+                listCompleted = document.querySelectorAll(".completed");
+                countTask.innerText = listCompleted.length 
             }, false);
 
         // Input cleaned
