@@ -38,16 +38,20 @@ function addToList(){
                 } else{
                     item.setAttribute("class", "completed");
                 }
+                listCompleted = document.querySelectorAll(".completed");
+                
+                let count = listCompleted.length;
+                countTask.innerText = `Tasks completed: ${count}`;
             }, false);
 
         // Input cleaned
         taskWindow.value = "";
-        listCompleted = document.querySelectorAll(".completed");
-        countTask.innerText = listCompleted.length;
+
+        //Add to Array
+        listArray.push (inputText);
     }else{
         infoText.innerText = "Text is empty!"
     }
 }
-countTask.innerText = 0;
 //Initializing button
 button.addEventListener("click", addToList, false);
