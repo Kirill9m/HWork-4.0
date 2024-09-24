@@ -36,3 +36,7 @@ ul {
     margin: auto;
     width: 200px;
 }
+
+.trashcan {
+    color: rgba(0, 36, 197, 0.651);
+}

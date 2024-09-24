@@ -5,15 +5,20 @@ const listText = document.querySelector("#list");
 const countTask = document.querySelector("#count");
 const infoText = document.querySelector('#infoText');
 const listArray = [];
-//Add Function
 
-function removeElement(){
-    myList.pop();
-    listText.removeChild(listText.childNodes[myList.length])
+//Changing status function
+function changeStatus(text, status){
+    let changeIndex = listArray.map(t => t.name).indexOf(text);
+    listArray[changeIndex].completed = status;
+}
+//Remove element from array function
+function removeElement(text){
+    let changeIndex = listArray.map(t => t.name).indexOf(text);
+    listArray.splice(changeIndex, 1);
 
 }
 
-function addToList(){
+function addElementToList(){
 
     inputText = taskWindow.value;
     //Check if window its not ""
@@ -21,8 +26,7 @@ function addToList(){
         const inputText = taskWindow.value;
         infoText.innerText = ""
 
-        //const listItem = document.querySelector('ul');
-        // Adding new html element in ul
+        // Adding new html elements throght JS
         const item = document.createElement('li');
         listText.appendChild(item);
 
@@ -30,28 +34,55 @@ function addToList(){
         itemLabel.innerText = inputText;
         item.appendChild(itemLabel);
 
-        // Event listener for span
-        itemLabel.addEventListener("click",
-            function(){
-                if(item.getAttribute("class") == "completed"){
+        const trashcan = document.createElement('span');
+        trashcan.innerHTML = "&#128465"
+        trashcan.setAttribute("class", "trashcan")
+        item.appendChild(trashcan);
+
+        //Function then clicking on label
+        function itemLabelClick(){
+            if(item.getAttribute("class") == "completed"){
                 item.setAttribute("class", "");
+                let todoText = item.firstChild.textContent;
+                changeStatus(todoText, false);
                 } else{
                     item.setAttribute("class", "completed");
+                    let todoText = item.firstChild.textContent;
+                    changeStatus(todoText, true);
                 }
-                listCompleted = document.querySelectorAll(".completed");
-                
+                //Get all the completed classes and write to count
+                listCompleted = document.querySelectorAll(".completed");     
                 let count = listCompleted.length;
                 countTask.innerText = `Tasks completed: ${count}`;
-            }, false);
+        }
+    
+    function trashcanClick(){
+        item.remove();
+        listCompleted = document.querySelectorAll(".completed");
+        let count = listCompleted.length;
+        countTask.innerText = `Tasks completed: ${count}`;
+        let todoText = item.firstChild.textContent;
+        removeElement(todoText);
+    }
+        //Trashcan and item label listeners
+        trashcan.addEventListener("click", trashcanClick, false);
+        itemLabel.addEventListener("click", itemLabelClick, false);
 
         // Input cleaned
         taskWindow.value = "";
 
         //Add to Array
-        listArray.push (inputText);
+        const toDoObject = {};
+        toDoObject.name = inputText;
+        toDoObject.completed = false;
+        listArray.push(toDoObject);
     }else{
         infoText.innerText = "Text is empty!"
     }
 }
-//Initializing button
-button.addEventListener("click", addToList, false);
+
+//Button listener
+button.addEventListener("click", addElementToList, false);
+
+// Array.indexOf
+//number.map(Math.sqrt)
