@@ -41,7 +41,7 @@ function addElementToList(){
 
         //Function then clicking on label
         function itemLabelClick(){
-            if(item.getAttribute("class") == "completed"){
+            if(toDoObject.completed){
                 item.setAttribute("class", "");
                 let todoText = item.firstChild.textContent;
                 changeStatus(todoText, false);
