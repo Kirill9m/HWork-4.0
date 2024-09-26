@@ -38,5 +38,7 @@ ul {
 }
 
 .trashcan {
-    color: rgba(0, 36, 197, 0.651);
+    color:rgb(255, 81, 0);
+    text-decoration: none;
+    display: inline-block;
 }
