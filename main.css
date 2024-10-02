@@ -49,8 +49,11 @@ div > ul {
 
 
 .listWindow{
+    margin: auto;
+    padding: 2px  5%;
     background-color: #9DB9D2;
     min-height: 10vh;
+    
 }
 
 .trashcan {
