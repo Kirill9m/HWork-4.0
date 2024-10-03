@@ -1,5 +1,5 @@
 * {
-    /* font-family: monospace; */
+    font-family: Guardian-Egyp-Web-Regular;
     box-sizing: border-box;
 }
 
@@ -8,20 +8,24 @@ button{
     color:rgb(0, 0, 0);
 }
 
+body {
+    background-image: url(img/output.jpg);
+}
 
 
-body > div, p, h1{
+body > div > div, p, h1 {
     margin: auto;
-    padding: 5px 5%;
+    /* padding: 5; */
     color:#1B2C3B;
     background-color:#9DB9D2;
-    width: 50%;
-    /* padding: 1.3em; */
+    padding: 1.1rem;
+    background-image: url(img/paper.jpg)
 
 }
 
-body > h1, p {
+body > div > h1, p {
     background-color:#4D7EA8;
+    background-image: url(img/paper.jpg)
 }
 
 p {
@@ -37,13 +41,15 @@ h1 {
 }
 
 
-div .completed{
+div div .completed{
 color:#6592B8;
 text-decoration-line: line-through;
 }
 
-div > ul {
+#taskWindow {
     margin: auto;
+    width: 80%;
+    
     
 }
 /* test */
@@ -52,6 +58,7 @@ div > ul {
     margin: auto;
     padding: 2px  5%;
     background-color: #9DB9D2;
+    background-image: url(img/paper.jpg);
     min-height: 10vh;
     
 }
@@ -60,4 +67,19 @@ div > ul {
     color:rgb(255, 81, 0);
     text-decoration: none;
     display: inline-block;
+}
+
+.container1{
+    padding-right: 150px;
+    padding-left: 150px;
+    padding-top: 300px;
+}
+
+@font-face {
+    font-family: 'Guardian-Egyp-Web-Regular'; /* Название шрифта */
+    src: url('front/Guardian-Egyp-Web-Regular.ttf') format('woff2'), /* Поддержка форматов */
+         url('front/Guardian-Egyp-Web-Regular.ttf') format('woff'),
+         url('front/Guardian-Egyp-Web-Regular.ttf') format('truetype');
+     font-weight: bold; /* или bold, если это жирный шрифт */
+    /* font-style: normal; или italic, если это курсивный шрифт */
 }

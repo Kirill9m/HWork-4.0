@@ -35,7 +35,7 @@ function addElementToList(){
         item.appendChild(itemLabel);
 
         const trashcan = document.createElement('span');
-        trashcan.innerHTML = "&#128465"
+        trashcan.innerHTML = "&#x231B"
         trashcan.setAttribute("class", "trashcan")
         item.appendChild(trashcan);
 
