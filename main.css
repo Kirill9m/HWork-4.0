@@ -9,6 +9,11 @@
     display: inline-block;
 }
 
+div div .completed{
+    color:#6592B8;
+    text-decoration-line: line-through;
+    }
+
 .container1{
     padding-right: 150px;
     padding-left: 150px;
