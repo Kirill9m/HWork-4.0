@@ -53,14 +53,14 @@ function addElementToList(){
                 //Get all the completed classes and write to count
                 listCompleted = document.querySelectorAll(".completed");     
                 let count = listCompleted.length;
-                countTask.innerText = `Tasks completed: ${count}`;
+                countTask.innerText = `${count} completed`;
         }
     
     function trashcanClick(){
         item.remove();
         listCompleted = document.querySelectorAll(".completed");
         let count = listCompleted.length;
-        countTask.innerText = `Tasks completed: ${count}`;
+        countTask.innerText = `${count} completed`;
         let todoText = item.firstChild.textContent;
         removeElement(todoText);
     }
