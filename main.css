@@ -1,66 +1,6 @@
 * {
-    font-family: Guardian-Egyp-Web-Regular;
+    /* font-family:  */
     box-sizing: border-box;
-}
-
-button{
-    cursor: pointer;
-    color:rgb(0, 0, 0);
-}
-
-body {
-    background-image: url(img/output.jpg);
-}
-
-
-body > div > div, p, h1 {
-    margin: auto;
-    /* padding: 5; */
-    color:#1B2C3B;
-    background-color:#9DB9D2;
-    padding: 1.1rem;
-    background-image: url(img/paper.jpg)
-
-}
-
-body > div > h1, p {
-    background-color:#4D7EA8;
-    background-image: url(img/paper.jpg)
-}
-
-p {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.539);
-}
-
-h1 {
-    font-size: 1.5rem;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-
-div div .completed{
-color:#6592B8;
-text-decoration-line: line-through;
-}
-
-#taskWindow {
-    margin: auto;
-    width: 80%;
-    
-    
-}
-/* test */
-
-.listWindow{
-    margin: auto;
-    padding: 2px  5%;
-    background-color: #9DB9D2;
-    background-image: url(img/paper.jpg);
-    min-height: 10vh;
-    
 }
 
 .trashcan {
@@ -73,13 +13,4 @@ text-decoration-line: line-through;
     padding-right: 150px;
     padding-left: 150px;
     padding-top: 300px;
-}
-
-@font-face {
-    font-family: 'Guardian-Egyp-Web-Regular'; /* Название шрифта */
-    src: url('front/Guardian-Egyp-Web-Regular.ttf') format('woff2'), /* Поддержка форматов */
-         url('front/Guardian-Egyp-Web-Regular.ttf') format('woff'),
-         url('front/Guardian-Egyp-Web-Regular.ttf') format('truetype');
-     font-weight: bold; /* или bold, если это жирный шрифт */
-    /* font-style: normal; или italic, если это курсивный шрифт */
 }
