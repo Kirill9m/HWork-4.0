@@ -4,7 +4,6 @@
 }
 body {
     background-color: pink;
-    
 }
 
 .trashcan {
@@ -18,12 +17,12 @@ body {
     text-decoration-line: line-through;
     }
 
-.container{
+#container{
+    /* opacity: 0; */
     margin: auto;
-    margin-top: 10%;
+    margin-top: 0%;
     width: 50%;
     background-color: rgb(255, 255, 255);
-    /* padding: 50%; */
     padding-top: 10px;
     
 }
@@ -31,11 +30,11 @@ h1, #count{
     margin: auto;
     width: 50%;
     text-align: center;
+    /* transition: 1s; */
 
 }
 
-.buttonsAndWindows {
-    padding-top: 25px;
+#buttonsAndWindows {
     margin: auto;
     width: 50%;
     text-align: center;
@@ -68,4 +67,43 @@ h1 {
 
 button{
     text-transform: uppercase;
+}
+
+.special{
+    animation-name: jumpAndAppear;
+    animation-duration: 0.6s;
+    animation-fill-mode: both;
+    /* animation-delay: 1s; */
+    /* animation-timing-function: ease-in-out; */
+
+}
+
+@keyframes jumpAndAppear {
+    0%{
+        transform: translateY(-60px);
+    }
+    50%{
+        transform: translateY(60px);
+    }
+    100%{
+        /* opacity: 1; */
+    }
+}
+
+.hideAndAppear{
+    animation-name: textIsComing;
+    animation-duration: 0.75s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    opacity: 0;
+
+}
+
+@keyframes textIsComing {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
