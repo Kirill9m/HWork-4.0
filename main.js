@@ -24,7 +24,9 @@ function addElementToList(){
     //Check if window its not ""
     if(inputText !== ""){
         const inputText = taskWindow.value;
-        infoText.innerText = ""
+        infoText.innerText = "";
+        infoText.classList.remove('warningText');
+        
 
         // Adding new html elements throght JS
         const item = document.createElement('li');
@@ -77,12 +79,12 @@ function addElementToList(){
         toDoObject.completed = false;
         listArray.push(toDoObject);
     }else{
-        infoText.innerText = "Text is empty!"
+                infoText.textContent = "Text is empty!"
+                infoText.classList.add('warningText');
     }
 }
 
 //Button listener
 button.addEventListener("click", addElementToList, false);
-
 // Array.indexOf
 //number.map(Math.sqrt)
