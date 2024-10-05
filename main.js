@@ -83,6 +83,9 @@ function addElementToList(){
 
 //Button listener
 button.addEventListener("click", addElementToList, false);
+button.addEventListener("click", changeClass => (){
+    infoText.classList.toggle('warningWindow');
+},false);
 
 // Array.indexOf
 //number.map(Math.sqrt)
