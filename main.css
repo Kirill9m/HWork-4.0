@@ -143,15 +143,20 @@ ul > li:hover{
     animation-name: warningBlink;
     color: red;
     animation-duration: 2s;
-    animation-fill-mode: both;
-    opacity: 1;
+    opacity: 0;
 }
 
-@warningBlink {
-  %0{
-    opacity:0;
+@keyframes warningBlink {
+  0%{
+    opacity: 0;
   }
-  %50{
+  33%{
+    opacity: 1;
+  }
+  66%{
+    opacity: 0;
+  }
+  100%{
     opacity: 1;
   }
 }
