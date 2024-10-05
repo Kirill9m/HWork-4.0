@@ -82,10 +82,10 @@ function addElementToList(){
 }
 
 //Button listener
-button.addEventListener("click", addElementToList, false);
-button.addEventListener("click", changeClass => (){
+button.addEventListener("click", addElementToList,changeClass, false);
+function changeClass (){
     infoText.classList.toggle('warningWindow');
-},false);
+}
 
 // Array.indexOf
 //number.map(Math.sqrt)
