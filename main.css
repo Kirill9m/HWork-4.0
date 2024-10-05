@@ -10,10 +10,15 @@ body {
     color:rgb(255, 81, 0);
     text-decoration: none;
     display: inline-block;
+    opacity:0.4;
+}
+
+.trashcan:hover{
+    opacity: 1;
 }
 
 .completed{
-    color:#6592B8;
+    color: lightgray;
     text-decoration-line: line-through;
     }
 
@@ -126,3 +131,23 @@ ul > li{
     
 }
 
+ul > li:hover{
+    text-decoration-line: line-trough;
+}
+
+.warningWindow {
+    animation-name: warningBlink;
+    color: red;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    opacity: 1;
+}
+
+@warningBlink {
+  %0{
+    opacity:0;
+  }
+  %50{
+    opacity: 1;
+  }
+}
