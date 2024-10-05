@@ -3,7 +3,11 @@
     box-sizing: border-box;
 }
 body {
-    background-color: pink;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to top, #ff7d76, #fe837d, #fd8a84, #fc908a, 
+    #fb9691, #fb9d98, #fba4a0, #fbaba7, #fcb4b0, #fdbeba, #fdc7c3, #fdd0cd);
 }
 
 .trashcan {
