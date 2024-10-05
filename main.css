@@ -138,12 +138,11 @@ ul > li{
 ul > li:hover{
     text-decoration-line: line-trough;
 }
-
-.warningWindow {
+.warningText {
     animation-name: warningBlink;
     color: red;
     animation-duration: 2s;
-    opacity: 0;
+    opacity: 1;
 }
 
 @keyframes warningBlink {
