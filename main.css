@@ -50,10 +50,17 @@ h1,
 
 }
 
-#buttonsAndWindows {
+#buttonsAndWindows{
     margin: auto;
     width: 50%;
     text-align: center;
+}
+
+.listWindow{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding-inline-end: 100px;
 }
 
 
