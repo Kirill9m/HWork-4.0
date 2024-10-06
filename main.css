@@ -1,5 +1,7 @@
 * {
     /* Global style appeared  */
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -14,7 +16,7 @@ body {
 /* Trash can have smaller opacity, and display type */
 .trashcan {
     display: inline-block;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 /* Trashcan hover line-through small hotfix */
 .trashcan:hover {
@@ -27,10 +29,11 @@ body {
 }
 
 /* Completed class have a line through, and gray color */
-.completed {
+.completed :first-child{
     color: lightgray;
     text-decoration-line: line-through;
 }
+
 
 /* Main conteiner centered */
 #container {
